@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* === Professional Indigo/Navy Accounting Palette (OKLCH) === */
+    /* Background: #F8FAFF very light indigo-white */
+    --background: 0.978 0.007 265;
+    /* Foreground: #111827 near-black */
+    --foreground: 0.18 0.015 255;
+
+    /* Cards: #FFFFFF */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.015 255;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.015 255;
+
+    /* Primary: Deep Indigo #4338CA */
+    --primary: 0.44 0.19 265;
+    --primary-foreground: 1 0 0;
+
+    /* Primary hover: #3730A3 */
+    --primary-hover: 0.37 0.16 265;
+
+    /* Primary light bg: #EEF2FF */
+    --primary-light: 0.96 0.03 265;
+
+    /* Secondary: light gray */
+    --secondary: 0.96 0.007 265;
+    --secondary-foreground: 0.18 0.015 255;
+
+    --muted: 0.96 0.007 265;
+    /* Muted text: #6B7280 */
+    --muted-foreground: 0.548 0.015 260;
+
+    --accent: 0.44 0.19 265;
+    --accent-foreground: 1 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border: #E8EAF6 indigo-tinted */
+    --border: 0.92 0.02 265;
+    --input: 0.92 0.02 265;
+    --ring: 0.44 0.19 265;
+
+    /* Sidebar: Deep Navy #1E3A5F */
+    --sidebar: 0.24 0.07 255;
+    --sidebar-foreground: 0.93 0.01 265;
+    --sidebar-primary: 0.55 0.22 265;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.32 0.09 255;
+    --sidebar-accent-foreground: 0.93 0.01 265;
+    --sidebar-border: 0.32 0.06 255;
+    --sidebar-ring: 0.55 0.22 265;
+
+    /* Amber accent: #F59E0B for highlights/warnings */
+    --amber: 0.76 0.17 80;
+    --amber-foreground: 0.18 0.015 255;
+    --amber-light: 0.97 0.03 80;
+
+    /* Success green */
+    --success: 0.65 0.14 145;
+    --success-light: 0.96 0.03 145;
+
+    /* Tally callout: light indigo bg */
+    --tally-bg: 0.95 0.04 265;
+    --tally-border: 0.75 0.12 265;
+
+    --chart-1: 0.44 0.19 265;
+    --chart-2: 0.6 0.18 220;
+    --chart-3: 0.65 0.14 145;
+    --chart-4: 0.76 0.17 80;
+    --chart-5: 0.55 0.22 15;
+
+    /* Text tokens */
+    --text-body: 0.374 0.015 264;
+    --footer-bg: 0.18 0.05 255;
+    --footer-text: 0.93 0.01 265;
+    --section-alt: 0.96 0.007 265;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    .print-break {
+      page-break-before: always;
+    }
+  }
+}
